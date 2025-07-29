@@ -5,7 +5,8 @@
     "type": "module",
     "scripts": {
         "lint": "eslint --fix",
-        "lint:style": "stylelint \"{packages,apps}/**/*.{css,vue}\""
+        "lint:style": "stylelint \"{packages,apps}/**/*.{css,vue}\"",
+        "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\""
     },
     "keywords": [],
     "author": "",
@@ -21,6 +22,7 @@
         "eslint-plugin-vue": "9.32.0",
         "stylelint": "16.14.1",
         "stylelint-config-standard": "37.0.0",
-        "stylelint-config-standard-vue": "1.0.0"
+        "stylelint-config-standard-vue": "1.0.0",
+        "cspell": "8.17.3"
     }
 }

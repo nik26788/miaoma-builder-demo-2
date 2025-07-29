@@ -44,7 +44,7 @@ touch .editorconfig
 }
 ```
 
-stylelint configuation
+### stylelint configuation
 
 ```
 {
@@ -55,6 +55,19 @@ stylelint configuation
         "stylelint": "16.14.1",
         "stylelint-config-standard": "37.0.0",
         "stylelint-config-standard-vue": "1.0.0",
+    }
+}
+```
+
+### cspell
+
+```
+{
+    "script": {
+        "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\""
+    },
+    "devDependies": {
+        "cspell": "8.17.3"
     }
 }
 ```
