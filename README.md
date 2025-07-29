@@ -43,3 +43,18 @@ touch .editorconfig
     }
 }
 ```
+
+stylelint configuation
+
+```
+{
+    "script": {
+        "lint:style": "stylelint \"{packages,apps}/**/*.{css,vue}\"",
+    },
+    "devDependies": {
+        "stylelint": "16.14.1",
+        "stylelint-config-standard": "37.0.0",
+        "stylelint-config-standard-vue": "1.0.0",
+    }
+}
+```
