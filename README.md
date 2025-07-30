@@ -126,3 +126,10 @@ touch .editorconfig
 ```
 npx husky init
 ```
+
+.husky/pre-commit
+
+```
+#!/usr/bin/env node
+pnpm lint && pnpm spellcheck
+```
