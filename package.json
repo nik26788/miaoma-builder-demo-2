@@ -5,8 +5,9 @@
     "type": "module",
     "scripts": {
         "lint": "eslint --fix",
-        "lint:style": "stylelint \"{packages,apps}/**/*.{css,vue}\"",
-        "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\""
+        "lint:style": "stylelint \"{packages,apps}/**/*.{scss,css,vue}\" --fix",
+        "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
+        "commit": "git-cz"
     },
     "keywords": [],
     "author": "",
@@ -23,6 +24,11 @@
         "stylelint": "16.14.1",
         "stylelint-config-standard": "37.0.0",
         "stylelint-config-standard-vue": "1.0.0",
-        "cspell": "8.17.3"
+        "cspell": "8.17.3",
+        "@commitlint/cli": "19.7.1",
+        "@commitlint/config-conventional": "19.7.1",
+        "commitizen": "4.3.1",
+        "cz-git": "1.11.0",
+        "husky": "9.1.7"
     }
 }

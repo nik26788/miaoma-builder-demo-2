@@ -28,6 +28,8 @@ touch .editorconfig
 
 ### eslint configuration
 
+- package.json
+
 ```json
 {
     "script": {
@@ -44,12 +46,19 @@ touch .editorconfig
 }
 ```
 
+- eslint.config.js
+
+```javascript
+# see detail file at current folder
+
+```
+
 ### stylelint configuation
 
 ```
 {
     "script": {
-        "lint:style": "stylelint \"{packages,apps}/**/*.{css,vue}\"",
+        "lint:style": "stylelint \"{packages,apps}/**/*.{scss,css,vue}\" --fix",
     },
     "devDependies": {
         "stylelint": "16.14.1",
@@ -61,6 +70,8 @@ touch .editorconfig
 
 ### cspell
 
+- package.json
+
 ```
 {
     "script": {
@@ -68,6 +79,33 @@ touch .editorconfig
     },
     "devDependies": {
         "cspell": "8.17.3"
+    }
+}
+```
+
+- cspell.json
+
+```
+# see detail file at current folder
+```
+
+- .cspell/custom-words.txt
+
+### commitlint
+
+- package.json
+
+```
+{
+    "script": {
+        "commit": "git-cz"
+    },
+    "devPendencies": {
+        "@commitlint/cli": "19.7.1",
+        "@commitlint/config-conventional": "19.7.1",
+        "commitizen": "4.3.1",
+        "cz-git": "1.11.0",
+        "husky": "9.1.7",
     }
 }
 ```
