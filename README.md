@@ -100,6 +100,11 @@ touch .editorconfig
     "script": {
         "commit": "git-cz"
     },
+    "config": {
+        "commitlint": {
+            "path": "node_modules/cz-git"
+        }
+    },
     "devPendencies": {
         "@commitlint/cli": "19.7.1",
         "@commitlint/config-conventional": "19.7.1",
@@ -108,4 +113,16 @@ touch .editorconfig
         "husky": "9.1.7",
     }
 }
+```
+
+- commitlint.config.js
+
+```
+# see detail file at current folder
+```
+
+- husky
+
+```
+npx husky init
 ```
