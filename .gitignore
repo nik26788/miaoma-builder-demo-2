@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .cspellcache
+.turbo
 
 # Editor directories and files
 .vscode/*
