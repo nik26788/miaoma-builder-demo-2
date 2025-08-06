@@ -1,8 +1,16 @@
 <script setup lang="ts">
-//
+import DataSourceLeftPanel from '../components/DataSourceLeftPanel/DataSourceLeftPanel.vue'
 </script>
 
 <template>
-  <div>Data Source</div>
-  <component :is="$blocksMap.button.material"></component>
+  <div class="ds-wrapper">
+    <DataSourceLeftPanel />
+  </div>
 </template>
+
+<style scoped>
+.ds-wrapper {
+  display: flex;
+  height: 100%;
+}
+</style>

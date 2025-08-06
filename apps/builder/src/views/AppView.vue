@@ -1,9 +1,29 @@
 <script setup lang="ts">
-import Navigator from '../components/Navigator.vue'
+import AppNavigator from '../components/AppNavigator.vue'
 //
 </script>
 
 <template>
-  <Navigator />
-  <router-view />
+  <div class="app-wrapper">
+    <header>
+      <AppNavigator />
+    </header>
+    <main>
+      <RouterView />
+    </main>
+  </div>
 </template>
+
+<style scoped>
+.app-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  height: calc(100% - var(--navigator-height));
+}
+</style>

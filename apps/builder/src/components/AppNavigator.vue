@@ -114,7 +114,7 @@ const checkActive = (value: string) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 48px;
+  height: var(--navigator-height);
   box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
 }
 

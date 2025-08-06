@@ -17,7 +17,7 @@ const router = createRouter({
         {
           path: 'layout',
           name: 'layout',
-          component: () => import('../views/LayoutView.vue')
+          component: () => import('../views/PageLayoutView.vue')
         },
         {
           path: 'actions',

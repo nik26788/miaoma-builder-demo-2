@@ -1,7 +1,6 @@
 <script setup lang="ts">
 //
 </script>
-
 <template>
-  <div>Layout</div>
+  <div class="previewer">App Mobile Previewer</div>
 </template>
