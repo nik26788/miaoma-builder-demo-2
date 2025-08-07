@@ -10,7 +10,9 @@ const previewMode = ref<PreviewerType>('laptop')
 <template>
   <div class="layout-content">
     <div class="layout-simulator-wrapper">
-      <component :is="previewMode === 'laptop' ? LaptopPreviewer : MobilePreviewer"></component>
+      <KeepAlive>
+        <component :is="previewMode === 'laptop' ? LaptopPreviewer : MobilePreviewer"></component>
+      </KeepAlive>
     </div>
   </div>
 </template>

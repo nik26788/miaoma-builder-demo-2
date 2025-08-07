@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { dropHandlers, smoothDnD } from 'smooth-dnd'
 import { defineProps, onMounted } from 'vue'
 
 import { BlockInfo } from '../types/blocks'
+
+smoothDnD.dropHandler = dropHandlers.reactDropHandler().handler
+
 defineProps<{
   block: BlockInfo
-  index: number
+  i: number
 }>()
 
 onMounted(() => {})

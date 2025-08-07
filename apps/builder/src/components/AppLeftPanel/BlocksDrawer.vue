@@ -6,7 +6,7 @@ import { SmoothDndDraggable } from '../SmoothDnd/SmoothDndDraggable.ts'
 <template>
   <div class="component-sub-drawer">
     <SmoothDndContainer
-      behavior="copy"
+      behaviour="copy"
       group-name="blocks"
       orientation="vertical"
       :get-child-payload="

@@ -1,10 +1,10 @@
 import {
-  ChartLine,
-  Form,
+  // ChartLine,
+  // Form,
   HamburgerButton,
-  ImageFiles,
-  Notes,
-  Quote,
+  // ImageFiles,
+  // Notes,
+  // Quote,
   Table,
   TitleLevel
 } from '@icon-park/vue-next'
@@ -20,40 +20,40 @@ type BlockBaseMeta = {
 }
 
 export const blocksBaseMetaList: BlockBaseMeta[] = [
-  {
-    type: 'quote',
-    label: 'Quote',
-    icon: Quote
-  },
-  {
-    type: 'heroTitle',
-    label: 'Hero Title',
-    icon: TitleLevel
-  },
-  {
-    type: 'image',
-    label: 'Image',
-    icon: ImageFiles
-  },
-  {
-    type: 'chart',
-    label: 'Charts',
-    icon: ChartLine
-  },
+  // {
+  //   type: 'quote',
+  //   label: 'Quote',
+  //   icon: Quote
+  // },
+  // {
+  //   type: 'image',
+  //   label: 'Image',
+  //   icon: ImageFiles
+  // },
+  // {
+  //   type: 'chart',
+  //   label: 'Charts',
+  //   icon: ChartLine
+  // },
+  // {
+  //   type: 'form',
+  //   label: 'Form',
+  //   icon: Form
+  // },
+  // {
+  //   type: 'notes',
+  //   label: 'Notes',
+  //   icon: Notes
+  // },
   {
     type: 'button',
     label: 'Button',
     icon: HamburgerButton
   },
   {
-    type: 'form',
-    label: 'Form',
-    icon: Form
-  },
-  {
-    type: 'notes',
-    label: 'Notes',
-    icon: Notes
+    type: 'heroTitle',
+    label: 'Hero Title',
+    icon: TitleLevel
   },
   {
     type: 'view',
@@ -75,7 +75,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'quote',
         label: 'Quote',
-        prop: {
+        props: {
           content: 'Quote Content',
           status: 'success'
         }
@@ -85,7 +85,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'notes',
         label: 'Notes',
-        prop: {
+        props: {
           content: ''
         }
       }
@@ -94,7 +94,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'heroTitle',
         label: 'Hero Title',
-        prop: {
+        props: {
           align: 'center',
           content: 'Hero Title'
         }
@@ -104,7 +104,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'image',
         label: 'Image',
-        prop: {
+        props: {
           url: ''
         }
       }
@@ -113,7 +113,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'view',
         label: 'View',
-        prop: {
+        props: {
           fields: {
             id: {
               type: 'text'
@@ -128,7 +128,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'button',
         label: 'Button',
-        prop: {
+        props: {
           chartType: 'echarts'
         }
       }
@@ -137,7 +137,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'chart',
         label: 'Chart',
-        prop: {
+        props: {
           content: 'Button'
         }
       }
@@ -146,7 +146,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         id,
         type: 'form',
         label: 'Form',
-        prop: {
+        props: {
           fields: []
         }
       }

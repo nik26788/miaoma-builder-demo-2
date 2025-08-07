@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { type DropResult } from 'smooth-dnd'
+import { dropHandlers, type DropResult, smoothDnD } from 'smooth-dnd'
 import { toRaw } from 'vue'
 
 import { SmoothDndContainer } from '../components/SmoothDnd/SmoothDndContainer.ts'
@@ -8,6 +8,8 @@ import { SmoothDndDraggable } from '../components/SmoothDnd/SmoothDndDraggable.t
 import { useAppEditorStore } from '../stores/appEditor'
 import { arrayMove } from '../utils/array'
 import BlockRenderer from './BlockRenderer.vue'
+
+smoothDnD.dropHandler = dropHandlers.reactDropHandler().handler
 
 const appEditorStore = useAppEditorStore()
 const { blocks } = storeToRefs(appEditorStore)
@@ -47,12 +49,12 @@ const applyDrag = <T extends any[]>(arr: T, dragResult: DropResult) => {
   >
     <SmoothDndDraggable
       v-for="(block, index) in blocks"
-      :key="block.id"
+      :key="`${block.id}_${index}`"
     >
       <div class="block-item">
         <BlockRenderer
           :block="block"
-          :index="index"
+          :i="index"
         />
       </div>
     </SmoothDndDraggable>
