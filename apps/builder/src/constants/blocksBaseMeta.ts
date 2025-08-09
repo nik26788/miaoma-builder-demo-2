@@ -86,17 +86,21 @@ export const getBlocksDefaultData = (type: BlockType) => {
         type: 'notes',
         label: 'Notes',
         props: {
-          content: ''
+          content: `
+            <p>I’m <em>running</em> Tiptap <s>with</s> Vue.js. 🎉</p>
+            <p><strong>You</strong> can also teach the editor new things. For example to recognize hex colors and add a color</p>
+            <p> swatch on the fly: #FFF, #0D0D0D, #616161, #A975FF, #FB5151, #FD9170, #FFCB6B, #68CEF8, #80cbc4, #9DEF8F </p>
+        `
         }
       }
     case 'heroTitle':
       return {
         id,
         type: 'heroTitle',
-        label: 'Hero Title',
+        label: '标题',
         props: {
           align: 'center',
-          content: 'Hero Title'
+          content: '标题'
         }
       }
     case 'image':
@@ -105,7 +109,7 @@ export const getBlocksDefaultData = (type: BlockType) => {
         type: 'image',
         label: 'Image',
         props: {
-          url: ''
+          url: 'https://images.pexels.com/photos/17108884/pexels-photo-17108884.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load'
         }
       }
     case 'view':
@@ -123,22 +127,27 @@ export const getBlocksDefaultData = (type: BlockType) => {
           data: []
         }
       }
+    case 'chart':
+      return {
+        id,
+        type: 'chart',
+        label: 'Charts',
+        props: {
+          chartType: 'echarts'
+        }
+      }
     case 'button':
       return {
         id,
         type: 'button',
         label: 'Button',
         props: {
-          chartType: 'echarts'
-        }
-      }
-    case 'chart':
-      return {
-        id,
-        type: 'chart',
-        label: 'Chart',
-        props: {
           content: 'Button'
+        },
+        events: {
+          // onClick: (e: Event) => {
+          //   console.log('onClick', e)
+          // }
         }
       }
     case 'form':

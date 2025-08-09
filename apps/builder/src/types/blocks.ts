@@ -59,6 +59,9 @@ export interface ButtonBlockInfo extends BaseBlockInfo {
   props: {
     content: string
   }
+  events: {
+    // onClick: (e: Event) => void
+  }
 }
 
 export interface FormBlockInfo extends BaseBlockInfo {

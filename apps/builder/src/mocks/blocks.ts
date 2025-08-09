@@ -67,6 +67,12 @@ export const blocks: BlockInfo[] = [
     label: 'Button',
     props: {
       content: 'Button'
+    },
+    events: {
+      // onClick: (e: Event) => {
+      //   // ignore
+      // console.log('onClick', e)
+      // }
     }
   }
   // {

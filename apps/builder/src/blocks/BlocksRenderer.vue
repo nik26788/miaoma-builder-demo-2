@@ -13,7 +13,7 @@ smoothDnD.dropHandler = dropHandlers.reactDropHandler().handler
 
 const appEditorStore = useAppEditorStore()
 const { blocks } = storeToRefs(appEditorStore)
-const { updateBlocks } = appEditorStore
+const { updateBlocks, unselectBlock } = appEditorStore
 
 const applyDrag = <T extends any[]>(arr: T, dragResult: DropResult) => {
   const { removedIndex, addedIndex, payload } = dragResult
@@ -42,14 +42,17 @@ const applyDrag = <T extends any[]>(arr: T, dragResult: DropResult) => {
 
 <template>
   <SmoothDndContainer
+    drag-handle-selector=".handle"
     group-name="blocks"
     orientation="vertical"
     tag="div"
+    class="renderer-dnd-container"
     @drop="updateBlocks(applyDrag(toRaw(blocks), $event))"
+    v-clickOutside="unselectBlock"
   >
     <SmoothDndDraggable
       v-for="(block, index) in blocks"
-      :key="`${block.id}_${index}`"
+      :key="block.id"
     >
       <div class="block-item">
         <BlockRenderer
@@ -60,3 +63,14 @@ const applyDrag = <T extends any[]>(arr: T, dragResult: DropResult) => {
     </SmoothDndDraggable>
   </SmoothDndContainer>
 </template>
+<style scoped>
+.renderer-dnd-container {
+  width: 100%;
+}
+</style>
+
+<style lang="css">
+.smooth-dnd-draggable-wrapper {
+  overflow: visible !important;
+}
+</style>
