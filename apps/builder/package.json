@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@demos-vbuilder/hooks": "workspace:*",
     "@icon-park/vue-next": "1.4.2",
     "nanoid": "5.0.9",
     "pinia": "^3.0.3",

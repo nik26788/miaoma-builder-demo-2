@@ -16,6 +16,15 @@ export default [
   },
   {
     files: ['**/*.{ts,tsx,vue}'],
+    ignores: [
+      // Ignore specific files/directories
+      '**/dist/**', // Exclude the 'dist' folder
+      '**/node_modules/**', // Exclude node_modules (default, but explicit is good)
+      '**/*.test.js', // Exclude all test files
+      'temp/**', // Exclude the 'temp' directory
+      '**/vendor/**', // Exclude vendor files
+      '**/coverage/**' // Exclude test coverage reports
+    ],
     rules: {
       ...js.configs.recommended.rules,
       ...pluginVue.configs['vue3-strongly-recommended'].rules,

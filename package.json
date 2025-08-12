@@ -1,5 +1,5 @@
 {
-  "name": "builder-demo-1",
+  "name": "demos-vbuilder",
   "version": "1.0.0",
   "packageManager": "pnpm@10.13.1",
   "main": "index.js",
