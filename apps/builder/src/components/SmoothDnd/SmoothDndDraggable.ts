@@ -1,4 +1,4 @@
-import { defineComponent,h } from 'vue'
+import { defineComponent, h } from 'vue'
 
 export const SmoothDndDraggable = defineComponent({
   name: 'SmoothDndDraggable',

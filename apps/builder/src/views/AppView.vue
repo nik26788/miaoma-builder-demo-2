@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppNavigator from '../components/AppNavigator.vue'
+import AppNavigator from '@/components/AppNavigator.vue'
 //
 </script>
 

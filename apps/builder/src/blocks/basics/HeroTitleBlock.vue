@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { HeroTitleBlockInfo } from '../../types/blocks'
+import type { HeroTitleBlockInfo } from '../../types/blocks';
 
 const props = defineProps<{
   blockInfo: HeroTitleBlockInfo

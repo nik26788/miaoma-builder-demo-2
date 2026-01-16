@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {useTitle, useToggle} from '@demos-vbuilder/hooks'
+import { useTitle, useToggle } from '@demos-vbuilder/hooks'
 
-const {isToggle, toggle} = useToggle()
+const { isToggle, toggle } = useToggle()
 useTitle('Hello title...')
 </script>
 <template>

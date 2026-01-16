@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 import LaptopPreviewer from './LaptopPreviewer.vue'
 import MobilePreviewer from './MobilePreviewer.vue'
-import { PreviewerType } from './type'
+import type { PreviewerType } from './type'
 
 const previewMode = ref<PreviewerType>('laptop')
 </script>

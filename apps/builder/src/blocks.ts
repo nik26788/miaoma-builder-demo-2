@@ -1,8 +1,9 @@
 import type { App, Component } from 'vue'
 
-import HeroTitleBlock from './blocks/basics/HeroTitleBlock.vue'
-import ViewBlock from './blocks/basics/ViewBlock.vue'
-import ButtonBlock from './blocks/external/ButtonBlock.vue'
+import HeroTitleBlock from '@/blocks/basics/HeroTitleBlock.vue'
+import ViewBlock from '@/blocks/basics/ViewBlock.vue'
+import ButtonBlock from '@/blocks/external/ButtonBlock.vue'
+
 import type { BlockType } from './types/blocks'
 
 interface BlockModel {

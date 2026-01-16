@@ -1,4 +1,4 @@
-import type { BlockInfo } from '@/types/block'
+import type { BlockInfo } from '@/types/blocks'
 
 export const blocks: BlockInfo[] = [
   {
